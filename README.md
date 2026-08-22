@@ -34,12 +34,22 @@ node daily_news.js
 
 ### ⏰ 定时运行（每天早上9点）
 
-Windows 系统直接双击：
-```
-启动每日AI日报.bat
+Windows 系统推荐安装到“任务计划程序”，这样不需要一直开着命令行窗口：
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\install_windows_task.ps1
 ```
 
-或者手动启动定时脚本：
+也可以直接双击：
+```
+install_daily_task.bat
+```
+
+运行日志保存在：
+```
+combined-daily\logs\daily-news.log
+```
+
+如果只想临时打开一个常驻窗口，也可以手动启动定时脚本：
 ```bash
 cd combined-daily
 node scheduler.js
